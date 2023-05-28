@@ -6,7 +6,7 @@ import {
   PostReferrals,
   TotalRevenue,
   PostCard,
-  TopAgent,
+  TopSeller,
 } from 'components';
 
 const Home = () => {
@@ -38,7 +38,7 @@ const Home = () => {
           title="Posts for Sale"
           value={684}
           series={[75, 25]}
-          colors={['#475BE8', '#E4E8EF']}
+          colors={['#e31953', '#E4E8EF']}
         />
         <PieChart
           title="Posts for Rent"
@@ -66,7 +66,7 @@ const Home = () => {
       </Stack>
 
       <Stack mt="25px" width="100%" flexWrap="wrap" direction="row" gap={4}>
-        <TopAgent />
+        <TopSeller />
 
         <Box
           flex={1}

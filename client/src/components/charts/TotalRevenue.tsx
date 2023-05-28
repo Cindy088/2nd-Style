@@ -20,10 +20,10 @@ const TotalRevenue = () => (
       <Typography fontSize={28} fontWeight={700} color="#11142D">$236,535</Typography>
       <Stack direction="row" alignItems="center" gap={1}>
         <ArrowCircleUpRounded
-          sx={{ fontSize: 25, color: '#475BE8' }}
+          sx={{ fontSize: 25, color: '#e31953' }}
         />
         <Stack>
-          <Typography fontSize={15} color="#475BE8">0.8%</Typography>
+          <Typography fontSize={15} color="#e31953">0.8%</Typography>
           <Typography fontSize={12} color="#808191
 "
           >Than last Month

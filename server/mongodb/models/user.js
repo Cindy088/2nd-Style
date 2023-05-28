@@ -13,10 +13,12 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  allProperties: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Post',
-  }],
+  allPosts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Post',
+    },
+  ],
 });
 
 const userModel = mongoose.model('User', UserSchema);

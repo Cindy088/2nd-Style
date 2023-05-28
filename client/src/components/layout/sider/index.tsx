@@ -185,9 +185,9 @@ export const Sider: typeof DefaultSider = ({ render }) => {
               py: isNested ? 1.25 : 1,
               '&.Mui-selected': {
                 '&:hover': {
-                  backgroundColor: isSelected ? '#1e36e8' : 'transparent',
+                  backgroundColor: isSelected ? '#e31953' : 'transparent',
                 },
-                backgroundColor: isSelected ? '#475be8' : 'transparent',
+                backgroundColor: isSelected ? '#e31953' : 'transparent',
               },
               justifyContent: 'center',
               margin: '10px auto',
@@ -241,9 +241,9 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             py: 1,
             '&.Mui-selected': {
               '&:hover': {
-                backgroundColor: pathname === '/' ? '#1e36e8' : 'transparent',
+                backgroundColor: pathname === '/' ? '#e31953' : 'transparent',
               },
-              backgroundColor: pathname === '/' ? '#475be8' : 'transparent',
+              backgroundColor: pathname === '/' ? '#e31953' : 'transparent',
             },
             justifyContent: 'center',
             margin: '10px auto',
@@ -423,13 +423,13 @@ export const Sider: typeof DefaultSider = ({ render }) => {
           </Box>
           <Button
             sx={{
-              background: '#475BE8',
+              background: '#e31953',
               color: 'primary.contrastText',
               textAlign: 'center',
               borderRadius: 0,
               borderTop: '1px solid #ffffff1a',
               '&:hover': {
-                background: '#1e36e8',
+                background: '#e31953',
               },
             }}
             fullWidth
@@ -446,7 +446,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             top: '64px',
             left: '0px',
             borderRadius: '0 6px 6px 0',
-            bgcolor: '#475be8',
+            bgcolor: '#e31953',
             zIndex: 1199,
             width: '36px',
           }}

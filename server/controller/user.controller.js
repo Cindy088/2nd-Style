@@ -35,8 +35,11 @@ const getUserInfoByID = async (req, res) => {
     const { id } = req.params;
     const userPosts = await User.findOne({ _id: id }).populate('allPosts');
 
-    if (userPosts) res.status(200).json(userPosts);
-    else res.status(404).send('User not found');
+    if (userPosts) {
+      res.status(200).json(userPosts);
+    } else {
+      res.status(404).send('User not found');
+    }
   } catch (err) {
     res.status(500).json({ message: 'Failed to get user posts, please try again later' });
   }

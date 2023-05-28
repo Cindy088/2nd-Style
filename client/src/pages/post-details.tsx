@@ -31,8 +31,8 @@ const PostDetails = () => {
     const response = confirm('Are you sure you want to delete this post?');
     if (response) {
       mutate({
-        resource: 'api/v1/posts',
-        // resource: 'posts',
+        // resource: 'api/v1/posts',
+        resource: 'posts',
         id: id as string,
       }, {
         onSuccess: () => {
@@ -82,8 +82,8 @@ const PostDetails = () => {
               <Box>
                 <Typography fontSize={16} fontWeight={600} mt="10px" color="#11142D">Price</Typography>
                 <Stack direction="row" alignItems="flex-end" gap={1}>
-                  <Typography fontSize={25} fontWeight={700} color="#475BE8">${postDetails.price}</Typography>
-                  <Typography fontSize={14} color="#808191" mb={0.5}>for one day</Typography>
+                  <Typography fontSize={25} fontWeight={700} color="#e31953">${postDetails.price}</Typography>
+                  <Typography fontSize={14} color="#808191" mb={0.5}>free delivery</Typography>
                 </Stack>
               </Box>
             </Stack>
@@ -118,12 +118,12 @@ const PostDetails = () => {
 
               <Box mt="15px">
                 <Typography fontSize={18} fontWeight={600} color="#11142D">{postDetails.creator.name}</Typography>
-                <Typography mt="5px" fontSize={14} fontWeight={400} color="#808191">Agent</Typography>
+                <Typography mt="5px" fontSize={14} fontWeight={400} color="#808191">Seller</Typography>
               </Box>
 
               <Stack mt="15px" direction="row" alignItems="center" gap={1}>
                 <Place sx={{ color: '#808191' }} />
-                <Typography fontSize={14} fontWeight={400} color="#808191">North Carolina, USA</Typography>
+                <Typography fontSize={14} fontWeight={400} color="#808191">CBD Sydney, Australia</Typography>
               </Stack>
 
               <Typography mt={1} fontSize={16} fontWeight={600} color="#11142D">{postDetails.creator.allPosts.length} Posts</Typography>
@@ -132,7 +132,7 @@ const PostDetails = () => {
             <Stack width="100%" mt="25px" direction="row" flexWrap="wrap" gap={2}>
               <CustomButton
                 title={!isCurrentUser ? 'Message' : 'Edit'}
-                backgroundColor="#475BE8"
+                backgroundColor="#e31953"
                 color="#FCFCFC"
                 fullWidth
                 icon={!isCurrentUser ? <ChatBubble /> : <Edit />}
@@ -166,8 +166,8 @@ const PostDetails = () => {
 
           <Box>
             <CustomButton
-              title="Book Now"
-              backgroundColor="#475BE8"
+              title="Contact Seller"
+              backgroundColor="#e31953"
               color="#FCFCFC"
               fullWidth
             />

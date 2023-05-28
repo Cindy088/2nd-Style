@@ -28,13 +28,13 @@ import { parseJwt } from 'utils/parse-jwt';
 
 import {
   Home,
-  Agents,
+  Sellers,
   Login,
   MyProfile,
   PostDetails,
   AllPosts,
   CreatePost,
-  AgentProfile,
+  SellerProfile,
   EditPost,
 } from 'pages';
 
@@ -136,7 +136,7 @@ const App = () => {
           catchAll={<ErrorComponent />}
           resources={[
             {
-              name: 'clothe', // LINK
+              name: 'posts', // LINK
               list: AllPosts,
               show: PostDetails,
               create: CreatePost,
@@ -144,17 +144,9 @@ const App = () => {
               icon: <CheckroomOutlined />,
             },
             {
-              name: 'accessories', // LINK
-              list: AllPosts,
-              show: PostDetails,
-              create: CreatePost,
-              edit: EditPost,
-              icon: <LocalMallOutlined />,
-            },
-            {
               name: 'seller', // LINK
-              list: Agents,
-              show: AgentProfile,
+              list: Sellers,
+              show: SellerProfile,
               icon: <PeopleAltOutlined />,
             },
             {

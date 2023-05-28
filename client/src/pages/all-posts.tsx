@@ -50,7 +50,7 @@ const AllPosts = () => {
               <CustomButton
                 title={`Sort price ${currentPrice === 'asc' ? '↑' : '↓'}`}
                 handleClick={() => toggleSort('price')}
-                backgroundColor="#475BE8"
+                backgroundColor="#e31953"
                 color="#FCFCFC"
               />
               <TextField
@@ -90,7 +90,7 @@ const AllPosts = () => {
                 )}
               >
                 <MenuItem value="">All</MenuItem>
-                {['Apartment', 'Villa', 'Farmhouse', 'Condos', 'Townhouse', 'Duplex', 'Studio', 'Chalet'].map((type) => (
+                {['Top', 'Dresses', 'Jumpers', 'Hoodies', 'Jackets', 'Skirts', 'Pants', 'Shoes', 'Accessories'].map((type) => (
                   <MenuItem key={type} value={type.toLowerCase()}>{type}</MenuItem>
                 ))}
               </Select>
@@ -98,7 +98,7 @@ const AllPosts = () => {
             <CustomButton
               title="Add Post"
               handleClick={() => navigate('/posts/create')}
-              backgroundColor="#475BE8"
+              backgroundColor="#e31953"
               color="#FCFCFC"
               icon={<Add />}
             />
@@ -120,7 +120,7 @@ const AllPosts = () => {
           <CustomButton
             title="Previous"
             handleClick={() => setCurrent((prev) => prev - 1)}
-            backgroundColor="#475BE8"
+            backgroundColor="#e31953"
             color="#FCFCFC"
             disabled={!(current > 1)}
           />
@@ -130,7 +130,7 @@ const AllPosts = () => {
           <CustomButton
             title="Next"
             handleClick={() => setCurrent((prev) => prev + 1)}
-            backgroundColor="#475BE8"
+            backgroundColor="#e31953"
             color="#FCFCFC"
             disabled={current === pageCount}
           />

@@ -72,8 +72,9 @@ const getPostDetail = async (req, res) => {
 
 const createPost = async (req, res) => {
   try {
-    const { title, description, postType, location, price, photo, email } =
-      req.body;
+    const {
+      title, description, postType, location, price, photo, email,
+    } = req.body;
 
     // Start a new session
     const session = await mongoose.startSession();

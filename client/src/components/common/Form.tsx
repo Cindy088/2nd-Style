@@ -58,14 +58,15 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
               defaultValue="apartment"
               {...register('postType', { required: true })}
             >
-              <MenuItem value="apartment">Apartment</MenuItem>
-              <MenuItem value="villa">Villa</MenuItem>
-              <MenuItem value="farmhouse">Farmhouse</MenuItem>
-              <MenuItem value="condos">Condos</MenuItem>
-              <MenuItem value="townhouse">Townhouse</MenuItem>
-              <MenuItem value="duplex">Duplex</MenuItem>
-              <MenuItem value="studio">Studio</MenuItem>
-              <MenuItem value="chalet">Chalet</MenuItem>
+              <MenuItem value="top">Top</MenuItem>
+              <MenuItem value="dresses">Dresses</MenuItem>
+              <MenuItem value="jumpers">Jumpers</MenuItem>
+              <MenuItem value="hoodies">Hoodies</MenuItem>
+              <MenuItem value="jackets">Jackets</MenuItem>
+              <MenuItem value="skirts">Skirts</MenuItem>
+              <MenuItem value="pants">Pants</MenuItem>
+              <MenuItem value="shoes">Shoes</MenuItem>
+              <MenuItem value="accessories">Accessories</MenuItem>
             </Select>
           </FormControl>
 
@@ -120,7 +121,7 @@ const Form = ({ type, register, handleSubmit, handleImageChange, formLoading, on
         <CustomButton
           type="submit"
           title={formLoading ? 'Submitting...' : 'Submit'}
-          backgroundColor="#475BE8"
+          backgroundColor="#e31953"
           color="#FCFCFC"
         />
       </form>

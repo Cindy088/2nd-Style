@@ -1,5 +1,5 @@
-import AgentProfile from './agent-profile';
-import Agents from './agent';
+import SellerProfile from './seller-profile';
+import Sellers from './seller';
 import AllPosts from './all-posts';
 import CreatePost from './create-post';
 import Home from './home';
@@ -9,8 +9,8 @@ import PostDetails from './post-details';
 import EditPost from './edit-post';
 
 export {
-  AgentProfile,
-  Agents,
+  SellerProfile,
+  Sellers,
   AllPosts,
   CreatePost,
   Home,

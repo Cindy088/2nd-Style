@@ -40,7 +40,7 @@ const PostCard = ({ id, title, location, price, photo }: PostCardProps) => (
         </Stack>
       </Stack>
       <Box px={1.5} py={0.5} borderRadius={1} bgcolor="#DADEFA" height="fit-content">
-        <Typography fontSize={12} fontWeight={600} color="#475BE8">${price}</Typography>
+        <Typography fontSize={12} fontWeight={600} color="#e31953">${price}</Typography>
       </Box>
     </CardContent>
   </Card>

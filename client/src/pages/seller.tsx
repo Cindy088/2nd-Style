@@ -1,14 +1,14 @@
 import { useList } from '@pankod/refine-core';
 import { Box, Typography } from '@pankod/refine-mui';
 
-import { AgentCard } from 'components';
+import { SellerCard } from 'components';
 
-const Agents = () => {
+const Sellers = () => {
   const { data, isLoading, isError } = useList({
     resource: 'users',
   });
 
-  const allAgents = data?.data ?? [];
+  const allSellers = data?.data ?? [];
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -20,7 +20,7 @@ const Agents = () => {
 
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142D">Agents List</Typography>
+      <Typography fontSize={25} fontWeight={700} color="#11142D">Sellers List</Typography>
 
       <Box
         mt="20px"
@@ -30,15 +30,15 @@ const Agents = () => {
           gap: '20px',
           backgroundColor: '#FCFCFC' }}
       >
-        {allAgents.length > 0
-        && allAgents?.map((agent) => (
-          <AgentCard
-            key={agent._id}
-            id={agent._id}
-            name={agent.name}
-            email={agent.email}
-            avatar={agent.avatar}
-            noOfPosts={agent.allPosts.length}
+        {allSellers.length > 0
+        && allSellers?.map((seller) => (
+          <SellerCard
+            key={seller._id}
+            id={seller._id}
+            name={seller.name}
+            email={seller.email}
+            avatar={seller.avatar}
+            noOfPosts={seller.allPosts.length}
           />
         ))}
       </Box>
@@ -46,4 +46,4 @@ const Agents = () => {
   );
 };
 
-export default Agents;
+export default Sellers;

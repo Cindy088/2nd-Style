@@ -45,7 +45,7 @@ const Profile = ({ type, name, avatar, email, posts }: ProfileProps) => (
             <Box flex={1} display="flex" flexDirection="column" justifyContent="space-between" gap="30px">
               <Stack direction="column">
                 <Typography fontSize={22} fontWeight={600} color="#11142D">{name}</Typography>
-                <Typography fontSize={16} color="#808191">Realestate Agent</Typography>
+                <Typography fontSize={16} color="#808191">Seller</Typography>
               </Stack>
 
               <Stack direction="column" gap="30px">
@@ -53,7 +53,7 @@ const Profile = ({ type, name, avatar, email, posts }: ProfileProps) => (
                   <Typography fontSize={14} fontWeight={500} color="#808191">Address</Typography>
                   <Box display="flex" flexDirection="row" alignItems="center" gap="10px">
                     <Place sx={{ color: '#11142D' }} />
-                    <Typography fontSize={14} color="#11142D">4517 Washington Ave. Manchaster, Kentucky 39495</Typography>
+                    <Typography fontSize={14} color="#11142D">123 User Avenue, Sydney, NSW 2000, Australia</Typography>
                   </Box>
                 </Stack>
 

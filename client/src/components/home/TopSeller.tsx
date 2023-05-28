@@ -2,22 +2,22 @@ import { useList } from '@pankod/refine-core';
 import { Box, Button, Stack, Typography } from '@pankod/refine-mui';
 import { Link } from '@pankod/refine-react-router-v6';
 
-interface AgentProfileProp {
+interface SellerProfileProp {
     name: string,
     avatar: string
 }
 
-const AgentProfile = ({ name, avatar }: AgentProfileProp) => (
+const SellerProfile = ({ name, avatar }: SellerProfileProp) => (
   <Stack direction="row" alignItems="center" gap="10px">
-    <img src={avatar} alt="agent" width={50} height={50} style={{ borderRadius: 15, objectFit: 'cover' }} />
+    <img src={avatar} alt="seller" width={50} height={50} style={{ borderRadius: 15, objectFit: 'cover' }} />
     <Box>
       <Typography fontSize={16} fontWeight={600} color="#11142D">{name}</Typography>
-      <Typography mt="2px" fontSize={14} fontWeight={500} color="#808191">Top Agent</Typography>
+      <Typography mt="2px" fontSize={14} fontWeight={500} color="#808191">Top Seller</Typography>
     </Box>
   </Stack>
 );
 
-const TopAgent = () => {
+const TopSeller = () => {
   const { data, isLoading, isError } = useList({
     resource: 'users',
     config: {
@@ -27,7 +27,7 @@ const TopAgent = () => {
     },
   });
 
-  const topAgents = data?.data ?? [];
+  const topSellers = data?.data ?? [];
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -48,10 +48,10 @@ const TopAgent = () => {
       flexDirection="column"
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center">
-        <Typography fontSize={18} fontWeight={600} color="#11142D">Top Agent</Typography>
+        <Typography fontSize={18} fontWeight={600} color="#11142D">Top Seller</Typography>
         <Button
           component={Link}
-          to="/agents"
+          to="/sellers"
           variant="outlined"
           sx={{
             textTransform: 'capitalize',
@@ -67,11 +67,11 @@ const TopAgent = () => {
       </Stack>
 
       <Box mt="25px" display="flex" flexDirection="column" gap={4}>
-        {topAgents.map((agent) => (
-          <AgentProfile
-            key={agent._id}
-            name={agent.name}
-            avatar={agent.avatar}
+        {topSellers.map((seller) => (
+          <SellerProfile
+            key={seller._id}
+            name={seller.name}
+            avatar={seller.avatar}
           />
         ))}
       </Box>
@@ -79,4 +79,4 @@ const TopAgent = () => {
   );
 };
 
-export default TopAgent;
+export default TopSeller;

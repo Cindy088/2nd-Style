@@ -8,22 +8,19 @@ import PieChart from './charts/PieChart';
 import PostReferrals from './charts/PostReferrals';
 import TotalRevenue from './charts/TotalRevenue';
 
-// agent
-import AgentCard from './agent/AgentCard';
+// seller
+import SellerCard from './seller/SellerCard';
 
 // home
-import TopAgent from './home/TopAgent';
+import TopSeller from './home/TopSeller';
 
 export {
   Profile,
   PostCard,
   CustomButton,
-
   PieChart,
   PostReferrals,
   TotalRevenue,
-
-  AgentCard,
-
-  TopAgent,
+  SellerCard,
+  TopSeller,
 };

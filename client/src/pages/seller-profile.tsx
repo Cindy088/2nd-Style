@@ -3,7 +3,7 @@ import { useParams } from '@pankod/refine-react-router-v6';
 
 import { Profile } from 'components';
 
-const AgentProfile = () => {
+const SellerProfile = () => {
   const { id } = useParams();
 
   const { data, isLoading, isError } = useOne({
@@ -11,7 +11,7 @@ const AgentProfile = () => {
     id: id as string,
   });
 
-  const agentProfile = data?.data ?? [];
+  const sellerProfile = data?.data ?? [];
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -23,13 +23,13 @@ const AgentProfile = () => {
 
   return (
     <Profile
-      type="Agent"
-      name={agentProfile?.name}
-      avatar={agentProfile?.avatar}
-      email={agentProfile?.email}
-      posts={agentProfile?.allPosts}
+      type="Seller"
+      name={sellerProfile?.name}
+      avatar={sellerProfile?.avatar}
+      email={sellerProfile?.email}
+      posts={sellerProfile?.allPosts}
     />
   );
 };
 
-export default AgentProfile;
+export default SellerProfile;
