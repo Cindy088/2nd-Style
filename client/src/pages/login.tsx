@@ -6,7 +6,7 @@ import { Container, Box } from '@pankod/refine-mui';
 
 import { CredentialResponse } from 'interfaces/google';
 // import { parseJwt } from 'utils/parse-jwt';
-import { yariga } from '../assets';
+import { stylelogo } from '../assets';
 
 export const Login: React.FC = () => {
   const { mutate: login } = useLogin<CredentialResponse>();
@@ -81,7 +81,7 @@ export const Login: React.FC = () => {
             alignItems: 'center',
           }}
         >
-          <img src={yariga} alt="Yariga Logo" />
+          <img src={stylelogo} alt="2ndStyle Logo" />
           <Box mt={4}>
             <GoogleButton />
           </Box>

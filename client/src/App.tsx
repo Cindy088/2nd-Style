@@ -60,8 +60,8 @@ const App = () => {
       // Save user to MongoDB
       if (profileObj) {
         const response = await fetch(
-          // 'https://yariga.up.railway.app/api/v1/users',
           'http://localhost:8080/api/v1/users',
+          // 'https://twond-style.onrender.com/api/v1/users',
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -129,8 +129,8 @@ const App = () => {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: 'auto' } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider('https://localhost:8080/api/v1')}
-          // dataProvider={dataProvider('https://yariga.up.railway.app/api/v1')}
+          // dataProvider={dataProvider('https://twond-style.onrender.com')}
+          dataProvider={dataProvider('http://localhost:8080/api/v1')}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
