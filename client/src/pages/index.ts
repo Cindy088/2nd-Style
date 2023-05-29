@@ -7,6 +7,7 @@ import { Login } from './login';
 import MyProfile from './my-profile';
 import PostDetails from './post-details';
 import EditPost from './edit-post';
+import Contact from './contact';
 
 export {
   SellerProfile,
@@ -18,4 +19,5 @@ export {
   MyProfile,
   PostDetails,
   EditPost,
+  Contact,
 };

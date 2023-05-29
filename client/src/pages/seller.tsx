@@ -20,7 +20,7 @@ const Sellers = () => {
 
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142D">Sellers List</Typography>
+      <Typography ml="30px" fontSize={25} fontWeight={700} color="#11142D">Sellers List</Typography>
 
       <Box
         mt="20px"

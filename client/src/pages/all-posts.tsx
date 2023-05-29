@@ -40,9 +40,9 @@ const AllPosts = () => {
 
   return (
     <Box>
-      <Box mt="20px" sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3 }}>
         <Stack direction="column" width="100%">
-          <Typography fontSize={25} fontWeight={700} color="#11142D">
+          <Typography fontSize={25} fontWeight={700} ml="30px" color="#11142D">
             {!allPosts.length ? 'There are no posts' : 'All Posts'}
           </Typography>
           <Box mb={2} mt={3} display="flex" width="84%" justifyContent="space-between" flexWrap="wrap">

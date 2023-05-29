@@ -61,7 +61,7 @@ export const Login: React.FC = () => {
   return (
     <Box
       component="div"
-      sx={{ backgroundColor: '#FCFCFC' }}
+      sx={{ backgroundColor: '#fff' }}
     >
       <Container
         component="main"
@@ -82,7 +82,7 @@ export const Login: React.FC = () => {
           }}
         >
           <img src={stylelogo} alt="2ndStyle Logo" />
-          <Box mt={4}>
+          <Box mt={1}>
             <GoogleButton />
           </Box>
         </Box>

@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Box,
   Drawer,
@@ -65,7 +65,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
 
   const [open, setOpen] = useState<{ [k: string]: any }>({});
 
-  React.useEffect(() => {
+  useEffect(() => {
     setOpen((previousOpen) => {
       const previousOpenKeys: string[] = Object.keys(previousOpen);
       const uniqueKeys = new Set([...previousOpenKeys, ...defaultOpenKeys]);
@@ -292,6 +292,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
           borderRadius: '12px',
           minHeight: '56px',
           width: '90%',
+          // gap: '10px',
         }}
       >
         <ListItemIcon

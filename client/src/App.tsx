@@ -9,6 +9,7 @@ import {
 } from '@pankod/refine-mui';
 import {
   AccountCircleOutlined,
+  AttachMoney,
   ChatBubbleOutline,
   CheckroomOutlined,
   LocalMallOutlined,
@@ -36,6 +37,7 @@ import {
   CreatePost,
   SellerProfile,
   EditPost,
+  Contact,
 } from 'pages';
 
 const axiosInstance = axios.create();
@@ -150,20 +152,16 @@ const App = () => {
               icon: <PeopleAltOutlined />,
             },
             {
-              name: 'review', // LINK
-              list: Home,
-              icon: <ThumbUpOutlined />,
-            },
-            {
-              name: 'message', // LINK
-              list: Home,
-              icon: <MailOutlined />,
-            },
-            {
               name: 'my-profile', // LINK
               options: { label: 'My Profile' },
               list: MyProfile,
               icon: <AccountCircleOutlined />,
+            },
+            {
+              name: 'contact', // LINK
+              options: { label: 'Contact' },
+              list: Contact,
+              icon: <MailOutlined />,
             },
           ]}
           Title={Title}

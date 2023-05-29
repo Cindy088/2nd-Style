@@ -1,4 +1,4 @@
-import { EmailOutlined, LocationCity, Phone, Place } from '@mui/icons-material';
+import { Article, EmailOutlined, Place } from '@mui/icons-material';
 import { useGetIdentity } from '@pankod/refine-core';
 import { Box, Stack, Typography } from '@pankod/refine-mui';
 import { Link } from '@pankod/refine-react-router-v6';
@@ -17,7 +17,7 @@ const SellerCard = ({ id, name, email, avatar, noOfPosts }: SellerCardProp) => {
 
   const generateLink = () => {
     if (currentUser.email === email) return '/my-profile';
-    return `/sellers/show/${id}`;
+    return `/seller/show/${id}`;
   };
 
   return (
@@ -56,12 +56,8 @@ const SellerCard = ({ id, name, email, avatar, noOfPosts }: SellerCardProp) => {
             icon={<Place sx={{ color: '#808191' }} />}
             name="Australia"
           />
-          {/* <InfoBar
-            icon={<Phone sx={{ color: '#808191' }} />}
-            name="+614-1234-567"
-          /> */}
           <InfoBar
-            icon={<LocationCity sx={{ color: '#808191' }} />}
+            icon={<Article sx={{ color: '#808191' }} />}
             name={`${noOfPosts} Posts`}
           />
         </Stack>

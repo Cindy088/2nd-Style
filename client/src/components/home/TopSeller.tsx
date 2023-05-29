@@ -48,10 +48,10 @@ const TopSeller = () => {
       flexDirection="column"
     >
       <Stack direction="row" justifyContent="space-between" alignItems="center">
-        <Typography fontSize={18} fontWeight={600} color="#11142D">Top Seller</Typography>
+        <Typography fontSize={18} fontWeight={600} color="#11142D">Top Sellers</Typography>
         <Button
           component={Link}
-          to="/sellers"
+          to="/seller"
           variant="outlined"
           sx={{
             textTransform: 'capitalize',

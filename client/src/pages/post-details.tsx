@@ -2,7 +2,7 @@
 import { Typography, Box, Stack } from '@pankod/refine-mui';
 import { useDelete, useGetIdentity, useShow } from '@pankod/refine-core';
 import { useParams, useNavigate } from '@pankod/refine-react-router-v6';
-import { ChatBubble, Delete, Edit, Phone, Place, Star } from '@mui/icons-material';
+import { ChatBubble, Delete, Edit, Email, Phone, Place, Star } from '@mui/icons-material';
 
 import { CustomButton } from 'components';
 
@@ -143,34 +143,19 @@ const PostDetails = () => {
                 }}
               />
               <CustomButton
-                title={!isCurrentUser ? 'Call' : 'Delete'}
+                title={!isCurrentUser ? 'Email' : 'Delete'}
                 backgroundColor={!isCurrentUser ? '#2ED480' : '#d42e2e'}
                 color="#FCFCFC"
                 fullWidth
-                icon={!isCurrentUser ? <Phone /> : <Delete />}
+                icon={!isCurrentUser ? <Email /> : <Delete />}
                 handleClick={() => {
                   if (isCurrentUser) handleDeletePost();
                 }}
               />
             </Stack>
           </Stack>
-
-          <Stack>
-            <img
-              src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
-              width="100%"
-              height={306}
-              style={{ borderRadius: 10, objectFit: 'cover' }}
-            />
-          </Stack>
-
           <Box>
-            <CustomButton
-              title="Contact Seller"
-              backgroundColor="#e31953"
-              color="#FCFCFC"
-              fullWidth
-            />
+            <CustomButton title="Go Back" backgroundColor="#e31953" color="#FCFCFC" fullWidth handleClick={() => navigate('/posts')} />
           </Box>
         </Box>
       </Box>

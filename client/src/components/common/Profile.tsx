@@ -6,12 +6,11 @@ import PostCard from './PostCard';
 
 const Profile = ({ type, name, avatar, email, posts }: ProfileProps) => (
   <Box>
-    <Typography fontSize={25} fontWeight={700} color="#11142D">{type} Profile</Typography>
-
+    <Typography ml="30px" fontSize={25} fontWeight={700} color="#11142D">{type} Profile</Typography>
     <Box
-      mt="20px"
+      mt="30px"
       borderRadius="15px"
-      padding="20px"
+      padding="30px"
       bgcolor="#FCFCFC"
     >
       <Box
@@ -21,17 +20,8 @@ const Profile = ({ type, name, avatar, email, posts }: ProfileProps) => (
           gap: 2.5,
         }}
       >
-        <img
-          src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-          width={340}
-          height={320}
-          alt="abstract"
-          className="my_profile-bg"
-        />
-
         <Box
           flex={1}
-          sx={{ marginTop: { md: '58px' }, marginLeft: { xs: '20px', md: '0px' } }}
         >
           <Box flex={1} display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap="20px">
             <img
